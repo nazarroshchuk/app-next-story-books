@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getPosts } from '@/api-services.js/getPosts';
+import { getPosts } from '@/api-services/getPosts';
 
 import './virtual-scroll.css';
 
