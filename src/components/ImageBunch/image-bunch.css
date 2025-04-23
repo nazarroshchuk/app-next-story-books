@@ -1,11 +1,11 @@
 .ImageBunch {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .ImageBunch__image {
-    border-radius: 50%;
-    overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 /*.ImageBunch__image:nth-child(even) {*/
@@ -13,10 +13,10 @@
 /*}*/
 
 .ImageBunch__image:first-child {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 .ImageBunch__image + .ImageBunch__image {
-    margin-left: -15px;
-    /*transform: translate(-10%);*/
+  margin-left: -15px;
+  /*transform: translate(-10%);*/
 }

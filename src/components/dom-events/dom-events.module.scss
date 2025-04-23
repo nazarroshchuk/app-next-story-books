@@ -1,7 +1,7 @@
 .parent1,
 .parent2,
 .parent3,
-.parent4,{
+.parent4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   }
 }
 
-.parent3{
+.parent3 {
   background: #ff9a3c;
 }
 
@@ -41,6 +41,6 @@
 .button {
   background: #155263;
   padding: 8px;
-  border: 1px solid  #ff9a3c;
+  border: 1px solid #ff9a3c;
   border-radius: 5px;
 }

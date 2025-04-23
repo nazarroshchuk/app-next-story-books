@@ -1,5 +1,5 @@
-import { ReactElement, useState } from "react";
-import { Cell, MemoCell } from "./Cell";
+import { ReactElement, useState } from 'react';
+import { Cell, MemoCell } from './Cell';
 
 const MATRIX_SIZE = 20;
 
@@ -22,12 +22,14 @@ export function AppMemo() {
   }
 
   return (
-    <div style={{
-      display: 'grid',
-      gridTemplateRows: `repeat(${MATRIX_SIZE}, 1fr)`,
-      gridTemplateColumns: `repeat(${MATRIX_SIZE}, 1fr)`,
-      height: '100vw',
-    }}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateRows: `repeat(${MATRIX_SIZE}, 1fr)`,
+        gridTemplateColumns: `repeat(${MATRIX_SIZE}, 1fr)`,
+        height: '100vw',
+      }}
+    >
       {grid}
     </div>
   );

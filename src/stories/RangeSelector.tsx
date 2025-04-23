@@ -1,29 +1,27 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { addDotZeroValue, splitGradient } from './helpers';
 
-
 import './RangeSelector.css';
 
 export interface RangeSelectorProps {
-  onChange?: (name: string, value: RangeType) => void,
-  width?: number,
-  name: string,
-  fromD: number
-  toD: number,
+  onChange?: (name: string, value: RangeType) => void;
+  width?: number;
+  name: string;
+  fromD: number;
+  toD: number;
 }
 
 export interface RangeType {
   [key: string]: number;
 }
 
-
 const RangeSelector: React.FC<RangeSelectorProps> = ({
-                                                       width = 468,
-                                                       onChange,
-                                                       fromD = 1,
-                                                       toD = 10,
-                                                       name
-                                                     }) => {
+  width = 468,
+  onChange,
+  fromD = 1,
+  toD = 10,
+  name,
+}) => {
   const min = 1;
   const max = 10;
   const itemLength = 30;
@@ -45,10 +43,11 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
 
     setFrom(value);
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    onChange && onChange(name, {
-      from: value,
-      to
-    });
+    onChange &&
+      onChange(name, {
+        from: value,
+        to,
+      });
   };
 
   const handleToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,12 +59,12 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
 
     setTo(value);
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    onChange && onChange(name, {
-      from,
-      to: value
-    });
+    onChange &&
+      onChange(name, {
+        from,
+        to: value,
+      });
   };
-
 
   const handleInputFrom = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -105,10 +104,11 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
       setFromInput(addDotZeroValue(fromInput));
       setFrom(+fromInput);
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      onChange && onChange(name, {
-        from: +fromInput,
-        to
-      });
+      onChange &&
+        onChange(name, {
+          from: +fromInput,
+          to,
+        });
     }
   };
 
@@ -119,13 +119,13 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
       setToInput(addDotZeroValue(toInput));
       setTo(+toInput);
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      onChange && onChange(name, {
-        from,
-        to: +toInput
-      });
+      onChange &&
+        onChange(name, {
+          from,
+          to: +toInput,
+        });
     }
   };
-
 
   const inRange = (from: number, to: number, value: number) => value > from && value < to;
 
@@ -156,7 +156,6 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
     return () => {
       document.head.removeChild(style);
     };
-
   }, [to, from, colors]);
 
   return (
@@ -185,17 +184,19 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
                   borderWidth: '1px 1px 1px 0px',
                   backgroundColor: inRange(from, to, i + 1)
                     ? colors[i]
-                    : isSelected(from, to, i + 1) ? '#ffffff' : '#F5F6FA',
+                    : isSelected(from, to, i + 1)
+                      ? '#ffffff'
+                      : '#F5F6FA',
                   borderColor: inRange(from, to, i + 1)
                     ? colors[i]
                     : isSelected(from, to, i + 1)
                       ? 'transparent'
                       : '#E9EBF0',
-                  borderStyle: 'solid'
+                  borderStyle: 'solid',
                 }}
               >
-                                {i + 1}
-                            </span>
+                {i + 1}
+              </span>
             ))}
           </div>
           <input
@@ -216,9 +217,7 @@ const RangeSelector: React.FC<RangeSelectorProps> = ({
           />
 
           <div className="RangeSelector__slider">
-            <div
-              className="RangeSelector__slider-track"
-            ></div>
+            <div className="RangeSelector__slider-track"></div>
           </div>
         </div>
       </div>

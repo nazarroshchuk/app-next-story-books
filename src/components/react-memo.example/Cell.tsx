@@ -1,20 +1,23 @@
-import React from "react";
+import React from 'react';
 
 type CellProps = {
   index: number;
   selected: boolean;
   onClick: (index: number) => void;
-}
+};
 
 export function Cell({ index, selected, onClick }: CellProps) {
   return (
-    <div onClick={() => onClick(index)} style={{
-      width: '100%',
-      height: '100%',
-      backgroundColor: getRandomHexColor(),
-      boxSizing: 'border-box',
-      border: `1px solid ${selected ? 'white' : '#0003'}`,
-    }} />
+    <div
+      onClick={() => onClick(index)}
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: getRandomHexColor(),
+        boxSizing: 'border-box',
+        border: `1px solid ${selected ? 'white' : '#0003'}`,
+      }}
+    />
   );
 }
 

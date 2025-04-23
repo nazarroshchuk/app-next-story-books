@@ -1,108 +1,108 @@
 .RangeSelector__container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    gap: 0;
-    box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 0;
+  box-sizing: border-box;
 }
 
 .RangeSelector__slider-box {
-    color: #000;
-    margin-bottom: 2px;
+  color: #000;
+  margin-bottom: 2px;
 }
 
 .RangeSelector__scale {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    font-size: 12px;
-    z-index: 1;
-    gap: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 12px;
+  z-index: 1;
+  gap: 0;
 }
 
 .RangeSelector__scale span {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 30px;
-    align-self: stretch;
-    border-width: 1px 1px 1px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 30px;
+  align-self: stretch;
+  border-width: 1px 1px 1px 0;
 }
 
 .RangeSelector__scale span:first-child {
-    border-radius: 8px 0 0 8px;
-    border-style: inset;
-    border-width: 1px 1px 1px 1px!important;
-    flex-basis: 29px;
+  border-radius: 8px 0 0 8px;
+  border-style: inset;
+  border-width: 1px 1px 1px 1px !important;
+  flex-basis: 29px;
 }
 .RangeSelector__scale span:last-child {
-    border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 .RangeSelector__slider-wrapper {
-    height: 30px;
-    position: relative;
-    margin: 0 auto;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
 }
 
-input[type="range"] {
-    position: absolute;
-    width: 100%;
-    pointer-events: none;
-    appearance: none;
-    height: 100%;
-    margin: 0;
-    z-index: 1;
-    background: transparent;
+input[type='range'] {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  appearance: none;
+  height: 100%;
+  margin: 0;
+  z-index: 1;
+  background: transparent;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    pointer-events: all;
-    appearance: none;
-    height: 28px;
-    width: 30px;
-    border-radius: 8px;
-    cursor: pointer;
+input[type='range']::-webkit-slider-thumb {
+  pointer-events: all;
+  appearance: none;
+  height: 28px;
+  width: 30px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .RangeSelector__slider {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    border-radius: 8px;
-    height: 28px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-radius: 8px;
+  height: 28px;
 }
 
 .RangeSelector__slider-track {
-    position: absolute;
-    height: 100%;
-/*//background: linear-gradient(to right, #FFAB39, #2CBA8B);*/
-    border-radius: 8px;
+  position: absolute;
+  height: 100%;
+  /*//background: linear-gradient(to right, #FFAB39, #2CBA8B);*/
+  border-radius: 8px;
 }
 
 .RangeSelector__labels {
-    width: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-basis: 60px;
+  width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 60px;
 }
 
 .RangeSelector__labels label {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .RangeSelector__labels input {
-    width: 58px;
-    height: 24px;
-    border-radius: 8px;
-    padding: 4px;
-    border: 1px solid #C7CCDB;
+  width: 58px;
+  height: 24px;
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid #c7ccdb;
 }
