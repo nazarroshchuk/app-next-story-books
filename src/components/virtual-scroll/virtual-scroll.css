@@ -1,0 +1,29 @@
+.virtual-scroll__container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+.virtual-scroll__view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+virtual-scroll-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.virtual-scroll-list__item {
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}

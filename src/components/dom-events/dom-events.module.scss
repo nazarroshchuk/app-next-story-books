@@ -1,0 +1,46 @@
+.parent1,
+.parent2,
+.parent3,
+.parent4,{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 70%;
+  max-width: 80%;
+}
+
+.parent1 {
+  background: #155263;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  p {
+    align-self: flex-start;
+  }
+}
+
+.parent2 {
+  background: #ff6f3c;
+
+  p {
+    align-self: flex-start;
+  }
+}
+
+.parent3{
+  background: #ff9a3c;
+}
+
+.parent4 {
+  background: #ffc93c;
+}
+
+.button {
+  background: #155263;
+  padding: 8px;
+  border: 1px solid  #ff9a3c;
+  border-radius: 5px;
+}
