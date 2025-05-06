@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from '../components/Modal';
+import { Modal } from '../components/modal/Modal';
 import { useState } from 'react';
 // import VirtualScroll from "@/components/virtual-scroll/virtual-scroll";
 // import UserForm from "@/components/form-component/form-component";

@@ -18,7 +18,7 @@ export const useLocalStorage = (
     } catch (e) {
       console.error(e);
     }
-  }, []);
+  }, [initValue, key, setValue]);
 
   useEffect(() => {
     try {
